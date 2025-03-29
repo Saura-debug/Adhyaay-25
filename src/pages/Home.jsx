@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import copaProfile from '../assets/profile_dominic.jpg'
 import copiProfile from '../assets/profile_tom.jpg'
+import { ShootingStars } from './../components/ui/shooting-stars';
+import { StarsBackground } from './../components/ui/stars-background';
 
 export default function Home() {
   const ref = useRef(null);
@@ -16,7 +18,25 @@ export default function Home() {
 
   return (
     <div className='w-full h-[400vh]'>
-      <div className='w-full h-[100vh]'></div>
+      <div className='w-full h-[100vh]'>
+      <div className="h-full bg-neutral-900 flex flex-col items-center justify-center relative w-full overflow-hidden">
+      <h2 className="relative z-10 text-3xl md:text-5xl font-medium text-center tracking-tight flex items-center gap-2 md:gap-8">
+  <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+    Shooting Star
+  </span>
+  <span className="text-white text-lg font-thin">x</span>
+  <span className="bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent">
+    Star Background
+  </span>
+</h2>
+
+  <div className="absolute inset-0">
+    <ShootingStars />
+    <StarsBackground />
+  </div>
+</div>
+
+      </div>
       <div className='w-full h-[300vh] bg-black text-white'>
         <div className='w-full h-screen flex justify-center items-center'>
           <p className='text-[150px] w-[70%] leading-[1] font-medium'>PASSION FOR EXCELLENCE + IMMERSIVE TECH IS AT OUR CORE</p>
